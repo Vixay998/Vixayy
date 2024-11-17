@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tình cảm của em dành cho chị</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #ffccf9, #fcc2ff, #a2d2ff);
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+            margin: 10px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #45a049;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .no:hover {
+            background-color: #e53935;
+        }
+        .truth {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .truth p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .cat {
+            position: absolute;
+            bottom: -40px;
+            right: -50px;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <h1>Chị ơi, em yêu chị thật lòng!</h1>
+        <div class="heart">❤️</div>
+        <p>Mỗi lần nhìn thấy chị, trái tim em như đập nhanh hơn.  
+        Em cảm thấy chị là người đặc biệt nhất trong cuộc đời em.  
+        Chị khiến em muốn cố gắng hơn, tốt hơn, để xứng đáng với tình cảm này.</p>
+        <p>Chị có tin không?</p>
+        <button class="yes" onclick="alert('Em rất vui vì chị tin em! ❤️')">Tin</button>
+        <button class="no" onclick="showTruth()">Không tin</button>
+        <img src="https://placekitten.com/120/120" alt="Cute Cat" class="cat">
+    </div>
+
+    <div class="container truth" id="truth-container">
+        <h1>Chị không tin em, nhưng...</h1>
+        <div class="heart">❤️</div>
+        <p>... em vẫn yêu chị bằng cả trái tim mình.</p>
+        <p>Em không mong chị sẽ tin ngay lập tức, nhưng tình cảm của em là thật.  
+        Em sẽ tiếp tục cố gắng, và hy vọng một ngày nào đó chị sẽ cảm nhận được.</p>
+        <p>Dù chị chọn thế nào, em vẫn luôn tôn trọng và yêu quý chị.</p>
+        <img src="https://placekitten.com/150/150" alt="Cute Cat" class="cat">
+    </div>
+
+    <script>
+        function showTruth() {
+            // Ẩn phần chính và hiện phần sự thật lòng
+            document.getElementById('main-container').style.display = 'none';
+            document.getElementById('truth-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
